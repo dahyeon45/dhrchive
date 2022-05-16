@@ -1,10 +1,11 @@
 import React from "react";
-import { createHashHistory } from "history";
+import '../components/App.css';
+
 
 const AUTHORIZE = "https://accounts.spotify.com/authorize";
-var client_id = process.env.REACT_APP_CLIENT_ID;
-var client_secret = process.env.REACT_APP_CLIENT_SECRET;
-var redirect_uri = "https://dahyeon45.github.io/dhrchive/";
+const client_id = process.env.REACT_APP_CLIENT_ID;
+const client_secret = process.env.REACT_APP_CLIENT_SECRET;
+const redirect_uri = "http://localhost:3000";
 
 function requestAuthorization(){
   let url = AUTHORIZE;
@@ -12,13 +13,19 @@ function requestAuthorization(){
   url += "&response_type=code";
   url += "&redirect_uri=" + encodeURI(redirect_uri);
   url += "&show_dialog=true";
-  url += "&scope=user-read-private user-read-email user-modify-playback-state user-read-playback-position user-library-read user-read-playback-state";
+  url += "&scope=user-read-private user-read-email streaming app-remote-control";
   window.location.href = url;
 }
 
 const Auth = () => 
     <>
-    <button onClick={requestAuthorization}>Login as Spotify</button>
+    <div className = "container">
+      <div className = "logo-container">
+        <img className = "logo" src = "https://dhphotoarchive.s3.ap-northeast-2.amazonaws.com/dhlogo.svg"></img>
+      </div>
+      <button className = "button_1" onClick={requestAuthorization}>Continue with Spotify</button>
+    </div>
+    
     </>
     
 export default Auth;

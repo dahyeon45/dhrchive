@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {HashRouter as Router, Route, Routes} from "react-router-dom";
 import Auth from "../routes/Auth";
-import Home from "../routes/Home";
+import Search from "../routes/Search";
 
 const AppRouter = ({isLoggedIn}) => {
     
@@ -10,7 +10,7 @@ const AppRouter = ({isLoggedIn}) => {
             <Routes>
                 {isLoggedIn ? <>
                 <Route exact={true} path={"/"}
-                    element={<Home />}>
+                    element={<Search />}>
                 </Route>
                 </> : <Route exact={true} path={"/"} element={<Auth />}> </Route>}
             </Routes>

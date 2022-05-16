@@ -9,7 +9,7 @@ const SEARCH = "https://api.spotify.com/v1/search";
 
 
 
-const Home = () => {
+const Search = () => {
 
     useEffect(
         ()=> {
@@ -18,6 +18,23 @@ const Home = () => {
         }
     )
     
+    const [searchData, setData] = useState([]);
+    const onSearch = (data) => {
+        setData(data);
+    }
+
+    const [mpost, setMpost] = useState("");
+    const onSubmit = (event) => {
+        event.preventDefault();
+        search(mpost);
+    }
+    const onChange = (event) => {
+        const {
+            target : {value},       
+        } = event;
+        setMpost(value);
+    }
+
     async function refreshAccessToken(){
 
         let body = "grant_type=refresh_token";
@@ -67,10 +84,37 @@ const Home = () => {
         return response;
     }
     
+    
+    async function search(keyword){
+        var searchStr = '?q='+ encodeURI(keyword) +'&type=track'
+        await callApi('GET', SEARCH + searchStr, null).then(
+            (response)=>(
+                response.json().then((data)=>{
+                    onSearch(data.tracks.items);
+                })
+            )
+        ).catch(
+            refreshAccessToken()
+        )
+    }
+
 
     return <div>
- 
+        <form onSubmit = {onSubmit}>
+            <input value = {mpost} onChange = {onChange} type = "text" placeholder = "search for track" maxLength={120} />
+            <input type = "submit" value = "search" />
+        </form>
+        <div>
+            {searchData.map((items)=>(
+                <Tracks
+                    key = {items.id}
+                    name = {items.name}
+                    artists = {items.artists}
+                    preview = {items.preview_url}
+                />
+            ))}
+        </div>        
     </div>;//paint Home
 }
 
-export default Home;
+export default Search;
