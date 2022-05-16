@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/dhrchive/static/css/main.c5a51ccc.css",
+    "main.js": "/dhrchive/static/js/main.285c22bd.js",
+    "index.html": "/dhrchive/index.html",
+    "main.c5a51ccc.css.map": "/dhrchive/static/css/main.c5a51ccc.css.map",
+    "main.285c22bd.js.map": "/dhrchive/static/js/main.285c22bd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c5a51ccc.css",
+    "static/js/main.285c22bd.js"
+  ]
+}
