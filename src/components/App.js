@@ -1,11 +1,14 @@
 import React, {useEffect, useState} from 'react';
 import AppRouter from 'components/Router';
+import {HashRouter as Router, Route, Routes} from "react-router-dom";
+import Search from 'routes/Search';
+import Home from 'routes/Home';
 import './App.css';
 
 
 var client_id = process.env.REACT_APP_CLIENT_ID;
 var client_secret = process.env.REACT_APP_CLIENT_SECRET;
-var redirect_uri = "http://localhost:3000";
+var redirect_uri = "https://dahyeon45.github.io/dhrchive";
 var access_token = null;
 var refresh_token = null;
 
@@ -90,6 +93,7 @@ function App() {
     <>
     <AppRouter isLoggedIn={isLoggedIn}/>
     <footer className = "footer"> &copy; {new Date().getFullYear()}. Dahyeon Jeong. All Rights Reserved.</footer>
+
     </>
   );
 }

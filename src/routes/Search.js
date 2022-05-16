@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from "react";
 import Tracks from "components/Tracks";
+import {HashRouter as Router, Route, Routes, Link} from "react-router-dom";
+import Home from "./Home";
+
+
 var access_token = "";
 var refresh_token = "";
 var client_id = process.env.REACT_APP_CLIENT_ID;
 var client_secret = process.env.REACT_APP_CLIENT_SECRET;
 const TOKEN = "https://accounts.spotify.com/api/token";
 const SEARCH = "https://api.spotify.com/v1/search";
+
 
 
 
@@ -100,6 +105,12 @@ const Search = () => {
 
 
     return <div>
+        <ul>
+            <li>
+                <Link to = "/" component={Home}>Home</Link>
+            </li>
+        </ul>
+
         <form onSubmit = {onSubmit}>
             <input value = {mpost} onChange = {onChange} type = "text" placeholder = "search for track" maxLength={120} />
             <input type = "submit" value = "search" />

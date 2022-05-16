@@ -5,7 +5,7 @@ import '../components/App.css';
 const AUTHORIZE = "https://accounts.spotify.com/authorize";
 const client_id = process.env.REACT_APP_CLIENT_ID;
 const client_secret = process.env.REACT_APP_CLIENT_SECRET;
-const redirect_uri = "http://localhost:3000";
+const redirect_uri = "https://dahyeon45.github.io/dhrchive";
 
 function requestAuthorization(){
   let url = AUTHORIZE;
@@ -20,9 +20,18 @@ function requestAuthorization(){
 const Auth = () => 
     <>
     <div className = "container">
-      <div className = "logo-container">
+
+      <div className = "img-container">
         <img className = "logo" src = "https://dhphotoarchive.s3.ap-northeast-2.amazonaws.com/dhlogo.svg"></img>
       </div>
+
+      <h1 className = "m-text">2019 travel album</h1>
+
+      <div className = "img-container">
+        <img className = "main-img" src = "https://dhphotoarchive.s3.ap-northeast-2.amazonaws.com/main_cph.png"></img>
+      </div>
+
+      <h2 className = "s-text" style={{padding: "10px 0px 20px 0px"}}>Please login with your spotify account<br></br>for better experience.</h2>
       <button className = "button_1" onClick={requestAuthorization}>Continue with Spotify</button>
     </div>
     

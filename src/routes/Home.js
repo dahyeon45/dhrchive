@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Tracks from "components/Tracks";
+import {HashRouter as Router, Route, Routes, Link} from "react-router-dom";
+import Search from "./Search";
+import AppRouter from "components/Router";
 var access_token = "";
 var refresh_token = "";
 var client_id = process.env.REACT_APP_CLIENT_ID;
@@ -68,8 +71,15 @@ const Home = () => {
     }
     
 
+
+
     return <div>
- 
+        <ul>
+            <li>
+                <Link to = "/search" component={Search}>Search</Link>
+            </li>
+        </ul>
+
     </div>;//paint Home
 }
 
