@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/dhrchive/static/css/main.cb33a1e9.css",
-    "main.js": "/dhrchive/static/js/main.febb65bb.js",
+    "main.css": "/dhrchive/static/css/main.ea47c5e3.css",
+    "main.js": "/dhrchive/static/js/main.b61ac44a.js",
     "static/media/Manrope-Bold.ttf": "/dhrchive/static/media/Manrope-Bold.5224ce684c5320e1cd35.ttf",
     "static/media/Manrope-Medium.ttf": "/dhrchive/static/media/Manrope-Medium.9e8b3e75804de4bab147.ttf",
     "static/media/Manrope-Regular.ttf": "/dhrchive/static/media/Manrope-Regular.d4804624aa39ec522f83.ttf",
@@ -10,11 +10,11 @@
     "static/media/Finesse-Roman.otf": "/dhrchive/static/media/Finesse-Roman.75cbb5194b615bd67bfd.otf",
     "static/media/Finesse-Italic.otf": "/dhrchive/static/media/Finesse-Italic.7e8fdb694cbb95d9cd4b.otf",
     "index.html": "/dhrchive/index.html",
-    "main.cb33a1e9.css.map": "/dhrchive/static/css/main.cb33a1e9.css.map",
-    "main.febb65bb.js.map": "/dhrchive/static/js/main.febb65bb.js.map"
+    "main.ea47c5e3.css.map": "/dhrchive/static/css/main.ea47c5e3.css.map",
+    "main.b61ac44a.js.map": "/dhrchive/static/js/main.b61ac44a.js.map"
   },
   "entrypoints": [
-    "static/css/main.cb33a1e9.css",
-    "static/js/main.febb65bb.js"
+    "static/css/main.ea47c5e3.css",
+    "static/js/main.b61ac44a.js"
   ]
 }
